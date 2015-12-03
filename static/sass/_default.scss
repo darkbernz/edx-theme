@@ -9,14 +9,20 @@
 //  Color variables (from Stanford palette unless noted)
 //-----------------
 
+$ms-color: #0072c6;
+$ms-color-dark: #003b66;
+
 //Main Color Variables
-$main-color: #f7691f;
-$dark-color: #ea281f; //Link Color
+$main-color: $ms-color;
+//$main-color: #f7691f;
+$dark-color: $ms-color-dark; //Link Color
+//$dark-color: #ea281f; //Link Color
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Main BG Color Variables
-$main-bg: #822537;
+$main-bg: $ms-color-dark;
+//$main-bg: #822537;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
 $main-bg-25: lighten($main-bg, 25%); 
 
@@ -62,10 +68,12 @@ $container-bg: $gray-1;
 $login-register-bg: $gray-1;
 $content-wrapper-bg: $gray-1;
 $header-image: none;
-$header-bg: transparentize(lighten($secondary, 18.5%), .25);
+$header-bg: #ffffff;
+//$header-bg: transparentize(lighten($secondary, 18.5%), .25);
 $courseware-header-image: none;
 $courseware-header-bg: transparentize(lighten($secondary, 18.5%), .25);
-$footer-bg: $secondary-25;
+$footer-bg: $ms-color;
+//$footer-bg: $secondary-25;
 $courseware-footer-border: 1px solid $main-bg-60;
 $courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
 $courseware-footer-margin: 50px;
@@ -89,10 +97,12 @@ $site-status-color: $bg-color;
 $header-graphic-super-color: $dark-color;
 $header-graphic-sub-color: $lighter-base-font-color;
 
-$header-link-color: $dark-color;
+$header-link-color: #ffffff;
+//$header-link-color: $dark-color;
 $header-link-hover: $light-color;
 
-$button-color: $main-color;
+$button-color: $ms-color;
+//$button-color: $main-color;
 $button-archive-color: $gray-3;
 
 $shadow-color: $gray;
@@ -182,10 +192,15 @@ $header_image_margin: -77px;
 //FOOTER MARGIN
 $footer_margin: ($baseline/4) 0;
 
+$a-tags: 'a, a:active, a:hover, a:visited';
+#{$a-tags} {
+	text-decoration: none;
+}
+
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: url('../themes/default/images/sunrise.jpg');
+$homepage-bg-image: url('../themes/default/images/background.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
@@ -212,7 +227,8 @@ $video-thumb-url: '../themes/default/images/edx.png';
 // Override CSS
 //-----------------
 html {
-    background-color: $secondary-25 !important;
+    background-color: $ms-color !important;
+    //background-color: $secondary-25 !important;
 }
 
 //-----------------
